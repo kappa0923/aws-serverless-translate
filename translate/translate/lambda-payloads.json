@@ -1,0 +1,27 @@
+{
+    "translate": {
+        "lambda": {
+            "body": {
+                "message": "こんにちは世界！"
+            }
+        },
+        "apigateway": {
+            "path": "/translate",
+            "method": {
+                "value": "POST",
+                "items": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "HEAD",
+                    "OPTIONS",
+                    "PATCH"
+                ]
+            },
+            "body": {
+                "message": "今日はいい天気ですね。"
+            }
+        }
+    }
+}
