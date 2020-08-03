@@ -7,10 +7,9 @@ exports.handler = (event, context, callback) => {
     const translate = new AWS.Translate({ apiVersion: '2017-07-01' });
 
     // リクエストからデータ取り出し
-    let body = '';
     let srcMessage = '';
     if (event.body) {
-        body = JSON.parse(event.body);
+        let body = typeof (event.body) === 'string' ? JSON.parse(event.body) : event.body;
         srcMessage = body.message;
         console.log(srcMessage);
     }
